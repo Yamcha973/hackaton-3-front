@@ -1,40 +1,33 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
 
-const medecine_alerts = [
-   {
-      date_time: "2020-11-08 11:00",
-      medicine_name: "Ventoline",
-   },
-   {
-      date_time: "2020-08-07 11:00",
-      medicine_name: "Efferalgan",
-   },
-   {
-      date_time: "2020-12-25 19:00",
-      medicine_name: "Doliprane",
-   },
-   {
-      date_time: "2020-07-07 19:00",
-      medicine_name: "Lysopaïne",
-   },
-]
-;
 
 const Treatment = (props) => {
+   const [treatments, setTreatments] = useState([]);
+   useEffect(() => {
+      axios.get('http://localhost:8000/api/patients/1/treatment')
+          .then(response => response.data)
+          .then(data => {
+             setTreatments(data);
+             console.log(data);
+          });
+   }, []);
+
    const {patient_name, changePage} = props ;
+   const tableau = {treatments};
+   console.log(tableau); 
    return(
       <> <button id='change_page' onClick={ () => changePage("practician_page") } > Retour liste patients </button>
          <h2>Voici le traitement en cours de {patient_name} </h2>
          <ul>
-            { medecine_alerts.map((alert) => {
-               return( 
-                  <div>
-                     <p> Le {alert.date_time} </p>
-                     <p> {alert.medecine_name} </p>
-                     <p> {alert.medecine_name} </p>
-                  </div>
-               )
-            })}
+            { tableau.treatments.map((alert) => { 
+                return(  
+                   <div> 
+                      <p> Le {alert.date_time} </p> 
+                      <p> {alert.nom} </p> 
+                  </div> 
+                ) 
+             })}
          </ul>
       </>
    )
