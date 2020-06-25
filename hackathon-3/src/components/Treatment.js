@@ -18,17 +18,17 @@ const Treatment = (props) => {
    console.log(tableau); 
    return(
       <> <button id='change_page' onClick={ () => changePage("practician_page") } > Retour liste patients </button>
-         <h2>Voici le traitement en cours de {patient_name} </h2>
-         <ul>
+         <h2 className='colorWhite'>Voici le traitement en cours de {patient_name} </h2>
+         <div className="left-align">
             { tableau.treatments.map((alert) => { 
-                return(  
-                   <div> 
-                      <p> Le {alert.date_time} </p> 
-                      <p> {alert.nom} </p> 
-                  </div> 
+               return(  
+               <div> 
+                  <p> Le {alert.date_time} </p> 
+                  <p> {alert.nom} </p> 
+               </div> 
                 ) 
              })}
-         </ul>
+         </div>
       </>
    )
 }

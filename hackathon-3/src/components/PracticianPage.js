@@ -22,7 +22,7 @@ class PracticianPage extends Component {
       return(<>
             <h1>Bienvenue Dr Raoult ! </h1>
             <h2>Vos patients en cours de traitement</h2>  
-            {this.state.patients.map((patient) => {return <button key={patient.id} id={patient.id} onClick={ (event) => {changePatient(event.target.id); changePatientName(patient.name) ;changePage("treatment")}}> {patient.name} </button>  })}
+            <div className="centered">{this.state.patients.map((patient) => {return <button key={patient.id} id={patient.id} onClick={ (event) => {changePatient(event.target.id); changePatientName(patient.name) ;changePage("treatment")}}> {patient.name} </button>  })}</div>
         </>)
    }
     
