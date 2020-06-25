@@ -8,7 +8,7 @@ class App extends Component {
   constructor(){
     super();
     this.state = {
-        active_page: 'practician_page',
+        active_page: 'patient_page',
         active_practician: 0,
         patient_name: '',
         active_patient: 'Brigitte Macron',
