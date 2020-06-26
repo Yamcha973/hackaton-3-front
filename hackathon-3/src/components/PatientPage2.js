@@ -8,18 +8,17 @@ const updateBoolean = (id) => {
 }
 
 
-function PatientPage(props) {
+function PatientPage2(props) {
     const [treatments, setTreatments] = useState([]);
     const [count, setCount] = useState(0);
     useEffect(() => {
-        axios.get('http://localhost:8000/api/patients/1/treatment')
+        axios.get('http://localhost:8000/api/patients/2/treatment')
             .then(response => response.data)
             .then(data => {
                 setTreatments(data);
                 console.log(data);
             });
     }, [count]); const { patient_name, changePage } = props;
-
     var tableau = { treatments };
     console.log(tableau);
     return (
@@ -38,4 +37,4 @@ function PatientPage(props) {
     )
 }
 
-export default PatientPage;
+export default PatientPage2;
