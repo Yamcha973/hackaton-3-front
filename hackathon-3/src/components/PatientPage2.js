@@ -12,7 +12,7 @@ function PatientPage2(props) {
     const [treatments, setTreatments] = useState([]);
     const [count, setCount] = useState(0);
     useEffect(() => {
-        axios.get('http://localhost:8000/api/patients/2/treatment')
+        axios.get('http://localhost:8000/api/patients/3/treatment')
             .then(response => response.data)
             .then(data => {
                 setTreatments(data);
@@ -24,15 +24,15 @@ function PatientPage2(props) {
     return (
         <>
             <h2>Bonjour! Voici les prises de médicaments pour votre traitement: </h2>
-            <ul>
+            <div className='treatments3'>
                 {tableau.treatments.map((alert) => {
                     return (
-                        <div>
+                        <div className='warningText'>
                             <p> Le {alert.date_time} {alert.nom} {alert.done ? "☑" : "☐"} <button key={alert.id} onClick={(event) => { updateBoolean(alert.id); setCount(count + 1); }} >J'ai pris mon médicament</button> </p>
                         </div>
                     )
                 })}
-            </ul>
+            </div>
         </>
     )
 }

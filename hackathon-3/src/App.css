@@ -6,21 +6,26 @@ body {
   width: 100%;
 }
 
+.integral {
+  display: flex;
+  flex-direction: column
+}
+
 h1 {
   text-align: center;
   color: #fff;
   font-size: 50px;
-  margin-top: 15%; 
+  margin-top: 15%;
 }
 
 h2 {
   text-align: center;
-  margin-top: 15%;
+  margin-top: 13%;
   padding-bottom: 5%;
 }
 
 button {
-  background: linear-gradient(45deg, #0696DD, #03BBDF );
+  background: linear-gradient(45deg, #0696DD, #03BBDF);
   height: 50px;
   width: 200px;
   margin: 0px 25px;
@@ -32,22 +37,10 @@ button {
   cursor: pointer;
   transition: .3s;
 }
+
 button:hover {
   transform: scale(1.2);
   transition: .3s;
-}
-
-.centered {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.left-align {
-  margin-top: 5%;
-  padding-top: 8px;
-  margin-left: 2%;
-  font-size: 20px;
 }
 
 #change_page {
@@ -56,4 +49,38 @@ button:hover {
 
 .colorWhite {
   color: #fff;
+}
+
+.megafont {
+  font-size: 3rem;
+}
+
+.buttonContainer{
+  display: flex;
+  flex-shrink: 0.8;
+  justify-content: center;
+}
+
+.buttonContainer2{
+  display: flex;
+  flex-shrink: 0.8;
+  justify-content: flex-end;
+  margin-top: 50%;
+}
+
+.warningText{
+  text-align: center;
+  font-size: 1.3rem;
+}
+
+.treatments{
+  text-align: center;
+}
+
+.treatments2{
+  margin-top: 150px;
+}
+
+.treatments3{
+  margin-top: 180px;
 }
