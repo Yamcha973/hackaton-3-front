@@ -1,38 +1,59 @@
-.App {
+body {
+  background-image: url('https://www.hitwest.com/upload/medias/Doctolib.jpg');
+  background-repeat: no-repeat;
+  /*background-attachment: fixed;*/
+  background-size: 100%;
+  width: 100%;
+}
+
+h1 {
   text-align: center;
+  color: #fff;
+  font-size: 50px;
+  margin-top: 15%; 
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h2 {
+  text-align: center;
+  margin-top: 15%;
+  padding-bottom: 5%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+button {
+  background: linear-gradient(45deg, #0696DD, #03BBDF );
+  height: 50px;
+  width: 200px;
+  margin: 0px 25px;
+  color: #fff;
+  border-radius: 25px;
+  font-size: 16px;
+  font-weight: 500;
+  border: 1px;
+  cursor: pointer;
+  transition: .3s;
+}
+button:hover {
+  transform: scale(1.2);
+  transition: .3s;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.centered {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-wrap: wrap;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.left-align {
+  margin-top: 5%;
+  padding-top: 8px;
+  margin-left: 2%;
+  font-size: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#change_page {
+  border: 2px solid #fff;
+}
+
+.colorWhite {
+  color: #fff;
 }
